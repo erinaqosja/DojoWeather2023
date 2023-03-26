@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DojoWeather</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="navbar padding align-center space-between flex">
+            <h1 class="bold">DojoWeather</h1>
+            <ul class="flex space-between f-size-30">
+                <li onclick="alert('Loading weather report...')">Burbank</li>
+                <li onclick="alert('Loading weather report...')">Chicago</li>
+                <li onclick="alert('Loading weather report...')">Dallas</li>
+            </ul>
+        </header>
+        <main class="padding">
+            <div class="main-title flex space-between align-center">
+                <h2 class="f-size-30 bold">San Jose</h2>
+                <p>show temperature in
+                    <select class="border" onchange=changeTemp(this)>
+                        <option>°C</option>
+                        <option>°F</option>
+                    </select>
+                </p>
+            </div>
+            <div class="main-body margin-top flex space-between">
+                <div class="main1 background-color text-center">
+                    <h2 class="margin10px bold f-size-30">Today</h2>
+                    <img class="img margin10px" src="images/some_rain.png" alt="rain">
+                    <p class="margin10px">some rain <br><span class="margin10px text-red f-size-30" id="t1">24°</span>
+                        <span class="text-blue margin10px f-size-30" id="t2">18°</span></p>
+                </div>
+                <div class="main2 background-color text-center">
+                    <h2 class="margin10px f-size-30 bold">Tomorrow</h2>
+                    <img class="img margin10px" src="images/some_sun.png" alt="sun">
+                    <p class="margin10px">some sun <br> <span class="margin10px text-red f-size-30"
+                            id="t3">27°</span><span class="text-blue margin10px f-size-30" id="t4">19°</span></p>
+                </div>
+                <div class="main3 background-color text-center">
+                    <h2 class="f-size-30 bold margin10px">Friday</h2>
+                    <img class="img margin10px" src="images/some_clouds.png" alt="clouds">
+                    <p class="margin10px">some clouds <br> <span class="text-red margin10px f-size-30"
+                            id="t5">21°</span><span class="text-blue margin10px f-size-30" id="t6">16°</span></p>
+                </div>
+                <div class="main4 background-color text-center">
+                    <h2 class="f-size-30 bold margin10px">Saturday</h2>
+                    <img class="img margin10px" src="images/some_sun.png" alt="sun">
+                    <p class="margin10px">some sun <br> <span class="text-red margin10px f-size-30"
+                            id="t7">26°</span><span class="text-blue margin10px f-size-30" id="t8">21°</span></p>
+                </div>
+            </div>
+        </main>
+        <footer class="padding" id="cookies">
+            <div class="cookie background-color align-center flex space-between border">
+                <img class="margin10px" src="images/cookie.png" alt="cookie">
+                <p><span class="bold">Stop! Cookie time</span><br>
+                    We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media
+                    features and to analyze our traffic. <a href="#" target="_blank" rel="noopener noreferrer">Read
+                        more...</a></p>
+                <button onclick=remove(this) class=" margin10px border bold btn">I Accept</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
